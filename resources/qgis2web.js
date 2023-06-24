@@ -27,7 +27,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 24, minZoom: 11, projection: new ol.proj.Projection({
+        extent: [270739.892925, 9856207.014964, 332137.361972, 9894214.971993], maxZoom: 24, minZoom: 11, projection: new ol.proj.Projection({
             code: 'EPSG:32737',
             extent: [-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789],
             units: 'm'})
@@ -37,7 +37,7 @@ var map = new ol.Map({
 var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
 map.addControl(layerSwitcher);
 
-map.getView().fit([292592.807029, 9869737.382534, 296430.148845, 9872112.879848], map.getSize());
+map.getView().fit([270739.892925, 9856207.014964, 332137.361972, 9894214.971993], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -78,7 +78,7 @@ var featureOverlay = new ol.layer.Vector({
 });
 
 var doHighlight = true;
-var doHover = false;
+var doHover = true;
 
 var highlight;
 var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});

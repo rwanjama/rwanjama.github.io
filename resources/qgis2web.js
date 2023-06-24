@@ -27,17 +27,15 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-        extent: [270739.892925, 9856207.014964, 332137.361972, 9894214.971993], maxZoom: 24, minZoom: 11, projection: new ol.proj.Projection({
+         maxZoom: 25, minZoom: 9, projection: new ol.proj.Projection({
             code: 'EPSG:32737',
             extent: [-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789],
             units: 'm'})
     })
 });
 
-var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
-map.addControl(layerSwitcher);
 
-map.getView().fit([270739.892925, 9856207.014964, 332137.361972, 9894214.971993], map.getSize());
+map.getView().fit([273667.734894, 9859915.614792, 304366.469418, 9878919.593306], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
